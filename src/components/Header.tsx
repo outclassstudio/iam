@@ -147,6 +147,7 @@ const Navbar = styled.div<ScrollPosition>`
   justify-content: center;
   align-items: start;
   padding-left: 25px;
+  gap: 3px;
 
   &.changed_header {
     display: none;

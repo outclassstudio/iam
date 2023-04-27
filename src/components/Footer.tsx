@@ -58,6 +58,7 @@ const FooterDiv = styled(FlexDivCentered)`
   margin: 0;
   border: none;
   color: white;
+  font-family: "Pretendard-Regular";
 
   ${mediaQuery.mobile} {
     width: 360px;
