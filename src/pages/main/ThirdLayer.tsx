@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export default function ThirdLayer() {
-  // const images = [
-  //   { url: "/assets/land1.png", text: "/assets/Thoughtful.png" },
-  //   { url: "/assets/land2.png", text: "/assets/Unitive.png" },
-  //   { url: "/assets/land3.png", text: "/assets/Energetic.png" },
-  // ];
   const images = [
     "/assets/Frame1.jpg",
     "/assets/Frame2.png",
@@ -47,19 +42,10 @@ const ImageWrapper = styled.div`
   display: flex;
 `;
 
-const SingleImageWrapper = styled.div`
-  /* position: relative; */
-  flex: 1 0 0;
-  height: 1080px;
-`;
-
 const SingleImage = styled.div<Url>`
   background-image: url(${(props) => props.imageUrl});
   background-position: center;
+  background-size: cover;
   flex: 1 0 0;
   height: 1080px;
-`;
-
-const ImageText = styled.img`
-  position: absolute;
 `;
