@@ -20,7 +20,7 @@ export default function Footer() {
           <MiddleText>사업자정보확인</MiddleText>
         </TextWrapper>
         <TextWrapper>
-          <SmallText>비영이단체 : 아이엠 / 대표 : 한승목</SmallText>
+          <SmallText>비영리단체 : 아이엠 / 대표 : 한승목</SmallText>
           <SmallText>
             주소 : 노원구 동일로 1352 4F / 문의 : whoiam@gmail.com
           </SmallText>
