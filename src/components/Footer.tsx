@@ -28,7 +28,7 @@ export default function Footer() {
         <Copyright>© I AM All Rights Reserved.</Copyright>
       </Left>
       <Right>
-        <Link to="/">
+        <Link to="/about">
           <PathName onClick={handleTop}>About</PathName>
         </Link>
         <Link to="/team">
