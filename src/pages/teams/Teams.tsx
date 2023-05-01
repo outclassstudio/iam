@@ -3,60 +3,46 @@ import AnotherHeader from "../../components/AnotherHeader";
 import { fadeAction } from "../../style/global.style";
 import Layout from "../Layout";
 
-export default function About() {
+export default function Teams() {
   return (
-    <Layout title="about">
+    <Layout>
       <AnotherHeader />
-      <AboutPageContainer>
+      <TeamsPageContainer>
         <FirstLayer></FirstLayer>
         <SecondLayer></SecondLayer>
         <ThirdLayer></ThirdLayer>
-        <FourthLayer></FourthLayer>
-      </AboutPageContainer>
+      </TeamsPageContainer>
     </Layout>
   );
 }
 
-const AboutPageContainer = styled.div`
+const TeamsPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  align-items: center;
   margin-top: 170px;
   animation: 0.6s ease-in-out ${fadeAction};
 `;
-
 const FirstLayer = styled.div`
-  background-image: url("/assets/motive.png");
+  background-image: url("/assets/media.png");
   background-size: cover;
   background-position: center;
-  width: 669px;
-  height: 343px;
+  width: 690px;
+  height: 548px;
   margin-bottom: 60px;
 `;
-
 const SecondLayer = styled.div`
-  background-image: url("/assets/understanding.png");
+  background-image: url("/assets/communication.png");
   background-size: cover;
   background-position: center;
-  width: 669px;
-  height: 1035px;
+  width: 690px;
+  height: 589px;
   margin-bottom: 60px;
 `;
-
 const ThirdLayer = styled.div`
-  background-image: url("/assets/vision.png");
+  background-image: url("/assets/answering.png");
   background-size: cover;
   background-position: center;
-  width: 669px;
-  height: 600px;
-`;
-
-const FourthLayer = styled.div`
-  background-image: url("/assets/vision2.png");
-  background-size: cover;
-  background-position: center;
-  width: 669px;
-  height: 464px;
-  margin-bottom: 80px;
+  width: 690px;
+  height: 543px;
+  margin-bottom: 60px;
 `;

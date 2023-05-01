@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 import Main from "./pages/main/Main";
+import Teams from "./pages/teams/Teams";
 import { GlobalStyle } from "./style/global.style";
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

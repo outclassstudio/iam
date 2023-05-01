@@ -31,7 +31,7 @@ export default function Footer() {
         <Link to="/about">
           <PathName onClick={handleTop}>About</PathName>
         </Link>
-        <Link to="/team">
+        <Link to="/teams">
           <PathName onClick={handleTop}>Teams</PathName>
         </Link>
         <Link to="/project">

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "../../components/Header";
+import { fadeAction } from "../../style/global.style";
 import Layout from "../Layout";
 import FirstLayer from "./FirstLayer";
 import SecondLayer from "./SecondLayer";
@@ -21,4 +22,5 @@ export default function Main() {
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  animation: 0.6s ease-in-out ${fadeAction};
 `;

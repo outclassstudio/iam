@@ -48,9 +48,9 @@ export default function AnotherHeader({ title }: Props) {
         </PathName>
         <PathName
           className={
-            window.location.pathname.indexOf("/team") !== -1 ? "active" : ""
+            window.location.pathname.indexOf("/teams") !== -1 ? "active" : ""
           }
-          onClick={() => movePage("/team")}
+          onClick={() => movePage("/teams")}
         >
           Teams
         </PathName>
