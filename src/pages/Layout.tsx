@@ -10,7 +10,6 @@ interface Props {
 export default function Layout({ children, title }: Props) {
   return (
     <MainContainer>
-      <Header title={title} />
       <ChildrenDiv>{children}</ChildrenDiv>
       <Footer />
     </MainContainer>

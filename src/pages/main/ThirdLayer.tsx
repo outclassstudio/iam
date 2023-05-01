@@ -9,7 +9,7 @@ export default function ThirdLayer() {
 
   return (
     <ThirdLayerContainer>
-      <ProfileText>Our Profile </ProfileText>
+      <ProfileText>Core Value</ProfileText>
       <ImageWrapper>
         {images.map((el, idx) => (
           <SingleImage key={idx} imageUrl={el}></SingleImage>
@@ -26,6 +26,7 @@ interface Url {
 const ThirdLayerContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 `;
 
 const ProfileText = styled.div`

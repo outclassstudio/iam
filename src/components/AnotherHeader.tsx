@@ -7,7 +7,7 @@ interface Props {
   title?: string;
 }
 
-export function Header({ title }: Props) {
+export default function AnotherHeader({ title }: Props) {
   const navigate = useNavigate();
 
   //스크롤 포지션 상태
@@ -75,7 +75,7 @@ export function Header({ title }: Props) {
             className={
               scrollPosition < 100 ? "original_header" : "changed_header"
             }
-            src="assets/title_logo.png"
+            src="assets/title_logo_black.png"
             alt=""
           />
         </Link>
@@ -84,16 +84,15 @@ export function Header({ title }: Props) {
   );
 }
 
-export default Header;
-
 interface ScrollPosition {
   scrollPosition: number;
 }
 
 const Background = styled.div<ScrollPosition>`
-  /* width: 100vw; */
+  /* width: 95%; */
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
   /* justify-content: space-around;
   flex-direction: column; */
   position: fixed;
@@ -127,7 +126,7 @@ const HeaderStyle = styled.div`
 
   a {
     text-decoration: none;
-    color: white;
+    color: #9a9a9a;
   }
   img {
     width: 152px;
@@ -154,18 +153,18 @@ const Navbar = styled.div<ScrollPosition>`
   }
 
   .active {
-    color: #ee292f;
+    color: black;
   }
 
   a {
     cursor: pointer;
-    color: white;
+    color: #9a9a9a;
     /* color: ${(props) =>
       props.scrollPosition > 100 ? colorSet.darkPink : "black"}; */
     text-decoration: none;
   }
   a:hover {
-    color: ${colorSet.base};
+    color: black;
   }
 
   ${mediaQuery.mobile} {
