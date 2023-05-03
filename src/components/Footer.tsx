@@ -45,14 +45,7 @@ export default function Footer() {
   );
 }
 
-// const MainDiv = styled(FlexDiv)`
-//   justify-content: center;
-//   background-color: white;
-//   margin-top: 10px;
-// `;
-
 const FooterDiv = styled(FlexDivCentered)`
-  /* width: 1150px; */
   width: 100%;
   height: 120px;
   margin: 0;
