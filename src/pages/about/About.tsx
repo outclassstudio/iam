@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
-import { fadeAction } from "../../style/global.style";
+import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function About() {
@@ -33,6 +33,11 @@ const FirstLayer = styled.div`
   width: 669px;
   height: 343px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 335px;
+    height: 172px;
+  }
 `;
 
 const SecondLayer = styled.div`
@@ -42,6 +47,11 @@ const SecondLayer = styled.div`
   width: 669px;
   height: 1035px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 335px;
+    height: 518px;
+  }
 `;
 
 const ThirdLayer = styled.div`
@@ -50,6 +60,11 @@ const ThirdLayer = styled.div`
   background-position: center;
   width: 669px;
   height: 600px;
+
+  ${mediaQuery.mobile} {
+    width: 335px;
+    height: 300px;
+  }
 `;
 
 const FourthLayer = styled.div`
@@ -59,4 +74,10 @@ const FourthLayer = styled.div`
   width: 669px;
   height: 464px;
   margin-bottom: 80px;
+
+  ${mediaQuery.mobile} {
+    width: 335px;
+    height: 232px;
+    margin-bottom: 40px;
+  }
 `;

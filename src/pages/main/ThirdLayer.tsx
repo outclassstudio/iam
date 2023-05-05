@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQuery } from "../../style/global.style";
 
 export default function ThirdLayer() {
   const images = [
@@ -37,6 +38,10 @@ const ProfileText = styled.div`
   font-size: 32px;
   color: #7294ae;
   text-decoration: underline;
+
+  ${mediaQuery.mobile} {
+    font-size: 22px;
+  }
 `;
 
 const ImageWrapper = styled.div`
