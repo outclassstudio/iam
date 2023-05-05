@@ -54,4 +54,8 @@ const SingleImage = styled.div<Url>`
   background-size: cover;
   flex: 1 0 0;
   height: 1080px;
+
+  ${mediaQuery.mobile} {
+    height: 540px;
+  }
 `;
