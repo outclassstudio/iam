@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
-import { fadeAction } from "../../style/global.style";
+import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Project() {
@@ -106,6 +106,10 @@ const Category = styled.div`
     color: black;
     font-weight: 900;
   }
+
+  ${mediaQuery.mobile} {
+    font-size: 14px;
+  }
 `;
 const LayerWrapper = styled.div`
   display: flex;
@@ -122,7 +126,13 @@ const LayerImage = styled.img`
   width: 100vw;
 `;
 const LayerText = styled.img`
-  &.a {
-    width: 650px;
+  width: 650px;
+
+  ${mediaQuery.pad} {
+    width: 500px;
+  }
+
+  ${mediaQuery.mobile} {
+    width: 350px;
   }
 `;

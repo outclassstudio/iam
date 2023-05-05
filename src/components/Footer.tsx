@@ -15,15 +15,21 @@ export default function Footer() {
   return (
     <FooterDiv>
       <Left>
-        <TextWrapper>
+        <TextWrapper className="top">
           <MiddleText>이용약관</MiddleText>
           <MiddleText>사업자정보확인</MiddleText>
         </TextWrapper>
         <TextWrapper>
-          <SmallText>비영리단체 : 아이엠 / 대표 : 한승목</SmallText>
-          <SmallText>
-            주소 : 노원구 동일로 1352 4F / 문의 : whoiam@gmail.com
-          </SmallText>
+          <SmallTextWrapper>
+            <SmallText>비영리단체 : 아이엠 </SmallText>
+            <SmallText className="bar">|</SmallText>
+            <SmallText>대표 : 한승목</SmallText>
+          </SmallTextWrapper>
+          <SmallTextWrapper>
+            <SmallText>주소 : 노원구 동일로 1352 4F </SmallText>
+            <SmallText className="bar">|</SmallText>
+            <SmallText> 문의 : whoiam@gmail.com</SmallText>
+          </SmallTextWrapper>
         </TextWrapper>
         <Copyright>© I AM All Rights Reserved.</Copyright>
       </Left>
@@ -55,7 +61,8 @@ const FooterDiv = styled(FlexDivCentered)`
 
   ${mediaQuery.mobile} {
     width: 360px;
-    height: 80px;
+    height: 130px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -63,21 +70,12 @@ const Left = styled.div`
   padding-left: 35px;
   flex: 1 0 auto;
 
-  img {
-    width: 150px;
-  }
-
   div {
     font-size: 11px;
   }
 
   ${mediaQuery.mobile} {
-    img {
-      width: 100px;
-    }
-    div {
-      display: none;
-    }
+    padding-left: 25px;
   }
 `;
 
@@ -97,6 +95,7 @@ const Right = styled(FlexDiv)`
   }
 
   ${mediaQuery.mobile} {
+    padding-right: 0px;
     a {
       font-size: 11px;
     }
@@ -109,10 +108,21 @@ const Copyright = styled.div`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+
+  ${mediaQuery.mobile} {
+    /* display: none; */
+  }
 `;
 
 const TextWrapper = styled.div`
   margin: 6px 0px 3px 0px;
+
+  ${mediaQuery.mobile} {
+    &.top {
+      display: flex;
+      gap: 10px;
+    }
+  }
 `;
 
 const MiddleText = styled.div`
@@ -123,9 +133,26 @@ const MiddleText = styled.div`
   color: #777777;
 `;
 
+const SmallTextWrapper = styled.div`
+  display: flex;
+  gap: 5px;
+
+  ${mediaQuery.mobile} {
+    flex-direction: column;
+    /* margin-bottom: 5px; */
+    gap: 0px;
+  }
+`;
+
 const SmallText = styled.div`
   font-weight: 300;
   font-size: 9px;
   line-height: 16px;
   color: #9a9a9a;
+
+  ${mediaQuery.mobile} {
+    &.bar {
+      display: none;
+    }
+  }
 `;

@@ -135,12 +135,13 @@ const HeaderStyle = styled.div`
 
   ${mediaQuery.mobile} {
     img {
-      width: 170px;
+      width: 120px;
     }
   }
 `;
 
 const Navbar = styled.div<ScrollPosition>`
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,17 +169,9 @@ const Navbar = styled.div<ScrollPosition>`
   }
 
   ${mediaQuery.mobile} {
-    font-size: 13px;
+    padding-left: 10px;
+    font-size: 12px;
   }
 `;
 
 const PathName = styled.a``;
-
-const DropdownBackGround = styled.div`
-  background-color: rgba(0, 0, 0, 0);
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  bottom: 0%;
-  right: 0%;
-`;

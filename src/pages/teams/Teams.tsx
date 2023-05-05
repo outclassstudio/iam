@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
-import { fadeAction } from "../../style/global.style";
+import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Teams() {
@@ -29,6 +29,11 @@ const FirstLayer = styled.div`
   width: 690px;
   height: 548px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 345px;
+    height: 274px;
+  }
 `;
 const SecondLayer = styled.div`
   background-image: url("/assets/communication.png");
@@ -37,6 +42,11 @@ const SecondLayer = styled.div`
   width: 690px;
   height: 589px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 345px;
+    height: 299px;
+  }
 `;
 const ThirdLayer = styled.div`
   background-image: url("/assets/answering.png");
@@ -45,4 +55,9 @@ const ThirdLayer = styled.div`
   width: 690px;
   height: 543px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 345px;
+    height: 272px;
+  }
 `;

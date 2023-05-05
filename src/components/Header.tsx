@@ -136,12 +136,13 @@ const HeaderStyle = styled.div`
 
   ${mediaQuery.mobile} {
     img {
-      width: 170px;
+      width: 120px;
     }
   }
 `;
 
 const Navbar = styled.div<ScrollPosition>`
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,7 +170,8 @@ const Navbar = styled.div<ScrollPosition>`
   }
 
   ${mediaQuery.mobile} {
-    font-size: 13px;
+    padding-left: 10px;
+    font-size: 12px;
   }
 `;
 

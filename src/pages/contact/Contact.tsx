@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
-import { fadeAction } from "../../style/global.style";
+import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Contact() {
@@ -34,6 +34,10 @@ const ContactPageContainer = styled.div`
 const ContactWrapper = styled.div`
   display: flex;
   margin-bottom: 50px;
+
+  ${mediaQuery.mobile} {
+    flex-direction: column;
+  }
 `;
 const ContactTitle = styled.div`
   background-image: url("/assets/contact_title.png");
@@ -43,8 +47,18 @@ const ContactTitle = styled.div`
   width: 690px;
   height: 20px;
   margin-bottom: 60px;
+
+  ${mediaQuery.mobile} {
+    width: 350px;
+    margin-bottom: 20px;
+  }
 `;
-const ContactImage = styled.img``;
+const ContactImage = styled.img`
+  ${mediaQuery.mobile} {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+`;
 const ContactContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,9 +68,17 @@ const ContactContentWrapper = styled.div`
 `;
 const SubTitle = styled.div`
   font-size: 23px;
+
+  ${mediaQuery.mobile} {
+    font-size: 18px;
+  }
 `;
 const SubText = styled.div`
   font-size: 18px;
   color: #636363;
   margin-bottom: 20px;
+
+  ${mediaQuery.mobile} {
+    font-size: 16px;
+  }
 `;
