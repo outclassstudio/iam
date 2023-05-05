@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
+import { fadeAction } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Contact() {
@@ -27,7 +28,8 @@ export default function Contact() {
 const ContactPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 200px 0px 100px 0px; ;
+  margin: 200px 0px 100px 0px;
+  animation: 0.6s ease-in-out ${fadeAction};
 `;
 const ContactWrapper = styled.div`
   display: flex;
