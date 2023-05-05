@@ -28,7 +28,7 @@ export default function Footer() {
           <SmallTextWrapper>
             <SmallText>주소 : 노원구 동일로 1352 4F </SmallText>
             <SmallText className="bar">|</SmallText>
-            <SmallText> 문의 : whoiam@gmail.com</SmallText>
+            <SmallText> 문의 : iamcreatorss@gmail.com</SmallText>
           </SmallTextWrapper>
         </TextWrapper>
         <Copyright>© I AM All Rights Reserved.</Copyright>
