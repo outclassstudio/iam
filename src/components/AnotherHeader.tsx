@@ -38,7 +38,7 @@ export default function AnotherHeader({ title }: Props) {
     <Background scrollPosition={scrollPosition}>
       <Navbar
         scrollPosition={scrollPosition}
-        className={scrollPosition < 100 ? "original_header" : "changed_header"}
+        className={scrollPosition < 70 ? "original_header" : "changed_header"}
       >
         <PathName
           className={window.location.pathname === "/about" ? "active" : ""}
@@ -73,7 +73,7 @@ export default function AnotherHeader({ title }: Props) {
         <Link to="/">
           <img
             className={
-              scrollPosition < 100 ? "original_header" : "changed_header"
+              scrollPosition < 70 ? "original_header" : "changed_header"
             }
             src="assets/title_logo_black.png"
             alt=""

@@ -17,7 +17,7 @@ export default function Contact() {
             <SubTitle>Break Time</SubTitle>
             <SubText>12:00 - 13:00</SubText>
             <SubTitle>제휴/문의</SubTitle>
-            <SubText>whoiam@gmail.com</SubText>
+            <SubText>iamcreatorss@gmail.com</SubText>
           </ContactContentWrapper>
         </ContactWrapper>
       </ContactPageContainer>
@@ -28,8 +28,12 @@ export default function Contact() {
 const ContactPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 200px 0px 100px 0px;
+  margin: 200px 0px 50px 0px;
   animation: 0.6s ease-in-out ${fadeAction};
+
+  ${mediaQuery.mobile} {
+    margin: 170px 0px 0px 0px;
+  }
 `;
 const ContactWrapper = styled.div`
   display: flex;
