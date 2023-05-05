@@ -19,7 +19,7 @@ export default function Main() {
   );
 }
 
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   animation: 0.6s ease-in-out ${fadeAction};

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
+import { fadeAction } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Project() {
@@ -15,11 +16,22 @@ export default function Project() {
       <AnotherHeader />
       <ProjectPageContainer>
         <ProjectHeader>
-          <Category onClick={() => handleCurrentPage("Media")}>Media</Category>
-          <Category onClick={() => handleCurrentPage("Communication")}>
+          <Category
+            onClick={() => handleCurrentPage("Media")}
+            className={currentPage === "Media" ? "Selected" : ""}
+          >
+            Media
+          </Category>
+          <Category
+            onClick={() => handleCurrentPage("Communication")}
+            className={currentPage === "Communication" ? "Selected" : ""}
+          >
             Communication
           </Category>
-          <Category onClick={() => handleCurrentPage("Answering")}>
+          <Category
+            onClick={() => handleCurrentPage("Answering")}
+            className={currentPage === "Answering" ? "Selected" : ""}
+          >
             Answering
           </Category>
         </ProjectHeader>
@@ -52,10 +64,6 @@ export default function Project() {
             </Layer>
             <Layer>
               <LayerImage src="assets/communication_image_2.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/communication_text_2.png"
-              ></LayerText>
             </Layer>
           </LayerWrapper>
         ) : null}
@@ -70,10 +78,6 @@ export default function Project() {
             </Layer>
             <Layer>
               <LayerImage src="assets/answering_image_2.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/answering_text_2.png"
-              ></LayerText>
             </Layer>
           </LayerWrapper>
         ) : null}
@@ -86,6 +90,7 @@ const ProjectPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 170px;
+  animation: 0.6s ease-in-out ${fadeAction};
 `;
 const ProjectHeader = styled.div`
   display: flex;
@@ -96,6 +101,11 @@ const ProjectHeader = styled.div`
 const Category = styled.div`
   color: #7e7e7e;
   cursor: pointer;
+
+  &.Selected {
+    color: black;
+    font-weight: 900;
+  }
 `;
 const LayerWrapper = styled.div`
   display: flex;
