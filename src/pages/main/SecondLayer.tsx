@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { formatWithOptions } from "util";
+import { mediaQuery } from "../../style/global.style";
 
 export default function SecondLayer() {
   return (
@@ -18,6 +19,14 @@ const SecondLayerContainer = styled.div`
   width: 100vw;
   height: 792px;
   position: relative;
+
+  ${mediaQuery.pad} {
+    height: 554px;
+  }
+
+  ${mediaQuery.mobile} {
+    height: 396px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -30,4 +39,12 @@ const ImageWrapper = styled.div`
 
 const WhoIam = styled.img`
   width: 280px;
+
+  ${mediaQuery.pad} {
+    width: 196px;
+  }
+
+  ${mediaQuery.mobile} {
+    width: 140px;
+  }
 `;
