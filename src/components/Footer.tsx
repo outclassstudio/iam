@@ -17,7 +17,7 @@ export default function Footer() {
       <Left>
         <TextWrapper className="top">
           <MiddleText>이용약관</MiddleText>
-          <MiddleText>사업자정보확인</MiddleText>
+          <MiddleText>사업자번호 : 102-80-03659</MiddleText>
         </TextWrapper>
         <TextWrapper>
           <SmallTextWrapper>
