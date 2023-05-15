@@ -23,7 +23,7 @@ export default function Footer() {
           <SmallTextWrapper>
             <SmallText>비영리단체 : 아이엠 </SmallText>
             <SmallText className="bar">|</SmallText>
-            <SmallText>대표 : 한승목</SmallText>
+            <SmallText>대표 : 한승목, 이민형</SmallText>
           </SmallTextWrapper>
           <SmallTextWrapper>
             <SmallText>주소 : 노원구 동일로 1352 4F </SmallText>
@@ -119,8 +119,9 @@ const TextWrapper = styled.div`
 
   ${mediaQuery.mobile} {
     &.top {
-      display: flex;
-      gap: 10px;
+      /* display: flex;
+      flex-direction: column;
+      gap: 3px; */
     }
   }
 `;
