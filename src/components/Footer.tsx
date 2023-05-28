@@ -26,7 +26,7 @@ export default function Footer() {
             <SmallText>대표 : 한승목, 이민형</SmallText>
           </SmallTextWrapper>
           <SmallTextWrapper>
-            <SmallText>주소 : 노원구 동일로 1352 4F </SmallText>
+            <SmallText>주소 : 노원구 동일로 1029 6F</SmallText>
             <SmallText className="bar">|</SmallText>
             <SmallText> 문의 : iamcreatorss@gmail.com</SmallText>
           </SmallTextWrapper>
