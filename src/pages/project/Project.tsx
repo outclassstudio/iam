@@ -3,6 +3,7 @@ import styled from "styled-components";
 import AnotherHeader from "../../components/AnotherHeader";
 import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
+import WhoIAM from "./WhoIAM";
 
 export default function Project() {
   const [currentPage, setCurrentPage] = useState("Media");
@@ -34,22 +35,22 @@ export default function Project() {
           >
             Answering
           </Category>
+          <Category
+            onClick={() => handleCurrentPage("whoIam")}
+            className={currentPage === "whoIam" ? "Selected" : ""}
+          >
+            Who I AM
+          </Category>
         </ProjectHeader>
         {currentPage === "Media" ? (
           <LayerWrapper>
             <Layer>
               <LayerImage src="assets/media_image_1.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/media_text_1.png"
-              ></LayerText>
+              <LayerText className="a" src="assets/media_text_1.png"></LayerText>
             </Layer>
             <Layer>
               <LayerImage src="assets/media_image_2.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/media_text_2.png"
-              ></LayerText>
+              <LayerText className="a" src="assets/media_text_2.png"></LayerText>
             </Layer>
           </LayerWrapper>
         ) : null}
@@ -57,10 +58,7 @@ export default function Project() {
           <LayerWrapper>
             <Layer>
               <LayerImage src="assets/communication_image_1.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/communication_text_1.png"
-              ></LayerText>
+              <LayerText className="a" src="assets/communication_text_1.png"></LayerText>
             </Layer>
             <Layer>
               <LayerImage src="assets/communication_image_2.png"></LayerImage>
@@ -71,16 +69,14 @@ export default function Project() {
           <LayerWrapper>
             <Layer>
               <LayerImage src="assets/answering_image_1.png"></LayerImage>
-              <LayerText
-                className="a"
-                src="assets/answering_text_1.png"
-              ></LayerText>
+              <LayerText className="a" src="assets/answering_text_1.png"></LayerText>
             </Layer>
             <Layer>
               <LayerImage src="assets/answering_image_2.png"></LayerImage>
             </Layer>
           </LayerWrapper>
         ) : null}
+        {currentPage === "whoIam" ? <WhoIAM /> : null}
       </ProjectPageContainer>
     </Layout>
   );
@@ -111,18 +107,18 @@ const Category = styled.div`
     font-size: 14px;
   }
 `;
-const LayerWrapper = styled.div`
+export const LayerWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Layer = styled.div`
+export const Layer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   margin-bottom: 60px;
 `;
-const LayerImage = styled.img`
+export const LayerImage = styled.img`
   width: 100vw;
 `;
 const LayerText = styled.img`
