@@ -37,7 +37,7 @@ const WhoIAM = () => {
           controlsList="nodownload"
           disablePictureInPicture
         >
-          <source src="assets/WhoIAM_Video.mp4" type="video/mp4" />
+          <source src="assets/WhoIAm_Video.mp4" type="video/mp4" />
         </IntroVideo>
 
         <IntroText src="assets/WhoIAM-IntroductionText(PC).png" />
