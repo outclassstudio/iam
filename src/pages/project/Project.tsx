@@ -17,29 +17,29 @@ export default function Project() {
       <AnotherHeader />
       <ProjectPageContainer>
         <ProjectHeader>
+        <Category
+            onClick={() => handleCurrentPage("whoIam")}
+            className={currentPage === "whoIam" ? "Selected" : ""}
+          >
+            Who I AM
+          </Category>
           <Category
             onClick={() => handleCurrentPage("Media")}
             className={currentPage === "Media" ? "Selected" : ""}
           >
             Media
           </Category>
-          <Category
+          {/* <Category
             onClick={() => handleCurrentPage("Communication")}
             className={currentPage === "Communication" ? "Selected" : ""}
           >
             Communication
-          </Category>
+          </Category> */}
           <Category
             onClick={() => handleCurrentPage("Answering")}
             className={currentPage === "Answering" ? "Selected" : ""}
           >
             Answering
-          </Category>
-          <Category
-            onClick={() => handleCurrentPage("whoIam")}
-            className={currentPage === "whoIam" ? "Selected" : ""}
-          >
-            Who I AM
           </Category>
         </ProjectHeader>
         {currentPage === "Media" ? (
