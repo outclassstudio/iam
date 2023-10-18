@@ -75,7 +75,7 @@ export default function AnotherHeader({ title }: Props) {
             className={
               scrollPosition < 70 ? "original_header" : "changed_header"
             }
-            src="assets/title_logo_black.png"
+            src="../../assets/title_logo_black.png"
             alt=""
           />
         </Link>

@@ -21,7 +21,7 @@ export default function Terms() {
 const TermsPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 200px;
 `;
 const TermsContentWrapper = styled.div`
   display: flex;
