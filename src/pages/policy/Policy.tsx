@@ -9,6 +9,7 @@ export default function Policy() {
       <AnotherHeader />
       <PolicyPageContainer>
         <PolicyContentWrapper>
+        <Spacer/><Spacer/><Spacer/><Spacer/> 
         <TermsTitle>개인정보 이용 약관</TermsTitle>
         <Spacer/>
         <PersonalPolicy/>

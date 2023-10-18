@@ -16,7 +16,14 @@ export default function Footer() {
     <FooterDiv>
       <Left>
         <TextWrapper className="top">
-          <MiddleText>이용약관</MiddleText>
+        <SmallTextWrapper>
+        <Link to="/terms">
+          <SubHyperLink onClick={handleTop}>이메일 무단수집 거부</SubHyperLink>
+        </Link>
+        <Link to="/policy">
+          <SubHyperLink onClick={handleTop}>개인정보 이용 약관</SubHyperLink>
+        </Link>
+        </SmallTextWrapper>
           <MiddleText>사업자번호 : 102-80-03659</MiddleText>
         </TextWrapper>
         <TextWrapper>
@@ -30,16 +37,11 @@ export default function Footer() {
             <SmallText className="bar">|</SmallText>
             <SmallText> 문의 : iamcreatorss@gmail.com</SmallText>
           </SmallTextWrapper>
+          <SmallTextWrapper>
+            <Copyright>© I AM All Rights Reserved.</Copyright>
+          </SmallTextWrapper>
         </TextWrapper>
-        <SmallTextWrapper>
-        <Copyright>© I AM All Rights Reserved.</Copyright>
-        <Link to="/terms/terms">
-          <SubHyperLink onClick={handleTop}>이메일 무단수집 거부</SubHyperLink>
-        </Link>
-        <Link to="/terms/policy">
-          <SubHyperLink onClick={handleTop}>개인정보 이용 약관</SubHyperLink>
-        </Link>
-        </SmallTextWrapper>
+        
       </Left>
       <Right>
         <Link to="/about">
@@ -77,6 +79,11 @@ const FooterDiv = styled(FlexDivCentered)`
 const Left = styled.div`
   padding-left: 35px;
   flex: 1 0 auto;
+
+  a {
+    text-decoration: none;
+    color: #1e1e1e;
+  }
 
   div {
     font-size: 11px;
@@ -166,10 +173,10 @@ const SmallText = styled.div`
   }
 `;
 const SubHyperLink = styled.div`
-  color: #636363;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  text-decoration: underline;
+  font-style: normal;
+  color: #777777;
   cursor: pointer;
 `;
