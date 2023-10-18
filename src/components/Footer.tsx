@@ -31,7 +31,15 @@ export default function Footer() {
             <SmallText> 문의 : iamcreatorss@gmail.com</SmallText>
           </SmallTextWrapper>
         </TextWrapper>
+        <SmallTextWrapper>
         <Copyright>© I AM All Rights Reserved.</Copyright>
+        <Link to="/terms/terms">
+          <SubHyperLink onClick={handleTop}>이메일 무단수집 거부</SubHyperLink>
+        </Link>
+        <Link to="/terms/policy">
+          <SubHyperLink onClick={handleTop}>개인정보 이용 약관</SubHyperLink>
+        </Link>
+        </SmallTextWrapper>
       </Left>
       <Right>
         <Link to="/about">
@@ -156,4 +164,12 @@ const SmallText = styled.div`
       display: none;
     }
   }
+`;
+const SubHyperLink = styled.div`
+  color: #636363;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 `;
