@@ -6,7 +6,7 @@ import Layout from "../Layout";
 import WhoIAM from "./WhoIAM";
 
 export default function Project() {
-  const [currentPage, setCurrentPage] = useState("Media");
+  const [currentPage, setCurrentPage] = useState("whoIam");
 
   const handleCurrentPage = (page: string) => {
     setCurrentPage(page);
