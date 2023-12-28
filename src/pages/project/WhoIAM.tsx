@@ -19,9 +19,12 @@ const WhoIAM = () => {
   };
 
   const handleLinkToApply = () => {
-    window.open("https://the-form.io/forms/survey/response/adfef5ec-f1da-42b9-ad56-a07fbb2922fa", "_blank")
-  }
- 
+    window.open(
+      "https://the-form.io/forms/survey/response/32c34765-a419-4987-84b3-777308f5be42",
+      "_blank"
+    );
+  };
+
   return (
     <LayerWrapper>
       <Layer>
@@ -55,7 +58,7 @@ const WhoIAM = () => {
         <MobileSchedule src="assets/WhoIAM-Schedule(Mobile).png" />
       </Layer>
       <Layer>
-        <ApplyBtn onClick={handleLinkToApply}>Who I AM 18기 신청하기</ApplyBtn>
+        <ApplyBtn onClick={handleLinkToApply}>Who I AM 신청하기</ApplyBtn>
       </Layer>
     </LayerWrapper>
   );
@@ -131,6 +134,6 @@ const ApplyBtn = styled.button`
   color: white;
   font-size: 18px;
   padding: 10px 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 0px; 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 0px;
   cursor: pointer;
-`
+`;
