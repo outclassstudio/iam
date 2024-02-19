@@ -28,7 +28,7 @@ const items = [
   {
     id: 4,
     title: "토끼가 탄 청룡열차",
-    text: "이번 역은 검은 토끼의 해를 지나쳐 더 멋진 청룡의 해로 달려가는 열차입니다🚌💨\n다양한 체험과 찐 맛도리 사주 타로 운세까지 2024년 새해를 알차게 맞이해보세요!\n※ 포토존, 토끼존, 별똥별존, 은하수존, 신세존, 청룡열차존 운영",
+    text: "이번 역은 검은 토끼의 해를 지나쳐 더 멋진 청룡의 해로 달려가는 열차입니다🚌💨\n다양한 체험과 찐 맛도리 사주 타로 운세까지 2024년 새해를 알차게 맞이해보세요!",
     thumbnail: "assets/history_bluedragon_P_1.jpg",
     details: ["assets/history_bluedragon_P_1.jpg", "assets/history_bluedragon_P_2.jpg", "assets/history_bluedragon_1.jpg", "assets/history_bluedragon_2.jpg"],
   },
