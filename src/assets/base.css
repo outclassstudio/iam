@@ -1,3 +1,11 @@
+.ballonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 항목 사이의 간격 조정 */
+    justify-content: center; /* 항목들을 중앙 정렬 */
+  }
+  
+
 .ballon_wrap {
     display: flex;
     flex-direction: column;
