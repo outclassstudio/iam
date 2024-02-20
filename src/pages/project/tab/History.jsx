@@ -7,7 +7,7 @@ const items = [
   {
     id: 1,
     title: 'Who I am Preview',
-    text: "강연기획단체 'I AM' 에서 준비한 'Who I am' 프로그램의 15기 시작 전, 모두가 자유롭게 들어볼 수 있는 프리뷰 맛보기 강연입니다. 'I AM' 의 이민형 대표가 전하는 철학, 'Who I am' 참여를 통한 내 삶의 변화된 모습을 제시합니다. ",
+    text: "강연기획단체 'I AM' 에서 준비한 'Who I am' 프로그램 시작 전, 모두가 자유롭게 들어볼 수 있는 프리뷰 맛보기 강연입니다. 'I AM' 의 이민형 대표가 전하는 삶의 가치, 'Who I am' 참여를 통한 내 삶의 변화된 모습을 제시합니다.",
     thumbnail: 'assets/history_whoiampreview_P_1.jpg',
     details: ['assets/history_whoiampreview_P_1.jpg', 'assets/history_whoiampreview_P_2.jpg', 'assets/history_whoiampreview_P_3.jpg', 'assets/history_whoiam_preview_1.jpg', 'assets/history_whoiam_preview_2.jpg', 'assets/history_whoiam_preview_3.jpg'],
   },
