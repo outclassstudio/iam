@@ -7,7 +7,7 @@ const items = [
   {
     id: 1,
     title: 'Who I am Preview',
-    text: "강연기획단체 'I AM' 에서 준비한 'Who I am' 프로그램 시작 전, 모두가 자유롭게 들어볼 수 있는 프리뷰 맛보기 강연입니다. 'I AM' 의 이민형 대표가 전하는 삶의 가치, 'Who I am' 참여를 통한 내 삶의 변화된 모습을 제시합니다.",
+    text: "강연기획단체 'I AM' 에서 준비한 'Who I am' 프로그램 시작 전, 모두가 자유롭게 들어볼 수 있는 프리뷰 맛보기 강연입니다. \n'I AM'이 전하는 삶의 가치, 'Who I am' 참여를 통한 내 삶의 변화된 모습을 제시합니다.",
     thumbnail: 'assets/history_whoiampreview_P_1.jpg',
     details: ['assets/history_whoiampreview_P_1.jpg', 'assets/history_whoiampreview_P_2.jpg', 'assets/history_whoiampreview_P_3.jpg', 'assets/history_whoiam_preview_1.jpg', 'assets/history_whoiam_preview_2.jpg', 'assets/history_whoiam_preview_3.jpg'],
   },
@@ -21,7 +21,7 @@ const items = [
   {
     id: 3,
     title: '떡 하나 주면 안 잡아 먹지',
-    text: '❤️ 떡 하나 주면 안 잡아 먹지: 해와 달이 된 오누이 ver. 인생의 한 시절은 마치 산의 한 고비를 넘는 것과 같다. 유년기, 청소년기, 청년기 ...그동안 살아온 인생의 고비를 되짚어보며 더 나은 미래의 인생을 그려볼 수 있는 시간. ',
+    text: '❤️ 떡 하나 주면 안 잡아 먹지: 해와 달이 된 오누이 ver. 인생의 한 시절은 마치 산의 한 고비를 넘는 것과 같다. \n유년기, 청소년기, 청년기 ...그동안 살아온 인생의 고비를 되짚어보며 더 나은 미래의 인생을 그려볼 수 있는 시간. ',
     thumbnail: 'assets/history_떡하나_P_1.jpg',
     details: ['assets/history_떡하나_P_1.jpg', 'assets/history_떡하나_1.jpg', 'assets/history_떡하나_2.jpg'],
   },
@@ -49,14 +49,14 @@ const items = [
   {
     id: 7,
     title: "LEADER",
-    text: "4차 산업 시대 가운데 진정한 리더쉽을 발휘하려면 ? 진짜 '나'를 알고 가치를 발견하는 인문학 강연 ",
+    text: "4차 산업 시대 가운데 진정한 리더쉽을 발휘하려면 ? \n진짜 '나'를 알고 가치를 발견하는 인문학 강연 ",
     thumbnail: "assets/history_LEADER_P.jpg",
     details: ["assets/history_LEADER_P.jpg"],
   },
   {
     id: 8,
     title: "Hello, World!",
-    text: "4차산업 시대 AI와 우리 전시 개요1) AI관련 작품 및 도슨트 해설 2) 포토존3) 체험존- 질문카드 작성 및 생성형 AI 미드저니 체험",
+    text: "4차산업 시대 AI와 우리 전시 \n1) AI관련 작품 및 도슨트 해설 \n2) 포토존\n3) 체험존- 질문카드 작성 및 생성형 AI 미드저니 체험",
     thumbnail: "assets/history_helloworld_P.jpg",
     details: ["assets/history_helloworld_P.jpg"],
   },

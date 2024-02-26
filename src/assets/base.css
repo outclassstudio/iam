@@ -44,6 +44,7 @@
       .ballon {
         padding: 20px;
         background-color: #f8f8f8;
+        white-space: pre-line;
       }
       
       .btn_wrap {
