@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Ballon } from 'components';
 import { ConfigProvider, Carousel, Modal } from 'antd';
 import 'assets/base.css';
@@ -59,13 +59,6 @@ const items = [
     text: "4차산업 시대 AI와 우리 전시 개요1) AI관련 작품 및 도슨트 해설 2) 포토존3) 체험존- 질문카드 작성 및 생성형 AI 미드저니 체험",
     thumbnail: "assets/history_helloworld_P.jpg",
     details: ["assets/history_helloworld_P.jpg"],
-  },
-  {
-    id: 9,
-    title: '하늘의 별따기',
-    text: 'music talk concert 하늘의 별따기 숨 막힐 듯 바쁜 일상, 잠시 쉬어갈 정거장이 되어줄 감성 뮤직 토크 콘서트!',
-    thumbnail: 'assets/history_하늘의별따기_P.jpg',
-    details: ['assets/history_하늘의별따기_P.jpg', 'assets/history_하늘의별따기_1.jpg', 'assets/history_하늘의별따기_2.jpg', 'assets/history_하늘의별따기_3.jpg'],
   },
 ];
 

@@ -1,19 +1,20 @@
 .ballonContainer {
         display: flex;
         flex-wrap: wrap;
-        gap: 110px; /* 항목 사이의 간격 조정 */
+        gap: 60px; /* 항목 사이의 간격 조정 */
         justify-content: center; /* 항목들을 중앙 정렬 */
+        margin: 20px 0px;
     }
 
     .ballon_wrap {
         background-color: #fff;
-        border-radius: 8px;
+        border-radius: 5px;
         overflow: hidden;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
-        margin-bottom: 20px; /* Masonry 간격 조정 */
-        max-width: 300px; /* 최대 너비 제한 */
+        margin-bottom: 20px; 
+        max-width: 300px; 
         display: flex;
-        flex-direction: column; /* 내부 요소를 수직으로 정렬 */
+        flex-direction: column;
       }
 
       .content_area{
@@ -41,13 +42,28 @@
       }
       
       .ballon {
-        padding: 10px;
+        padding: 20px;
         background-color: #f8f8f8;
       }
       
       .btn_wrap {
         padding: 10px;
         text-align: right;
-        margin-top: auto; /* 버튼을 항상 아래에 위치시킴 */
+        margin-top: auto;
       }
       
+      
+      .press {
+        background-color: #525252;
+        color : white;
+        border: none;
+        padding : 7px 10px;
+        font-size : 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 0px;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+      .press:active {
+        box-shadow: none;
+      }
