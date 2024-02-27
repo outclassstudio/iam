@@ -53,13 +53,13 @@ const items = [
     thumbnail: "assets/history_LEADER_P.jpg",
     details: ["assets/history_LEADER_P.jpg"],
   },
-  {
+  /*{
     id: 8,
     title: "Hello, World!",
     text: "4차산업 시대 AI와 우리 전시 \n1) AI관련 작품 및 도슨트 해설 \n2) 포토존\n3) 체험존- 질문카드 작성 및 생성형 AI 미드저니 체험",
     thumbnail: "assets/history_helloworld_P.jpg",
     details: ["assets/history_helloworld_P.jpg"],
-  },
+  },*/
 ];
 
 export const History = () => {
