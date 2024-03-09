@@ -6,7 +6,7 @@ export default function FirstLayer() {
     <FirstLayerContainer>
       <BackgroundVideo autoPlay muted loop>
         <VideoSource
-          src="https://cdn.discordapp.com/attachments/938684956916449330/1103987476655251486/main_video.mp4"
+          src="assets/main.mp4"
           type="video/mp4"
         />
       </BackgroundVideo>

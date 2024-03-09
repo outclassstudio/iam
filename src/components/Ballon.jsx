@@ -4,13 +4,13 @@ export const Ballon = ({children,text,title,button}) => {
   return (
     <div className='ballon_wrap'>
       <div className="content_wrap">
-            {children}
+        {children}
       </div>
       <div className="title_wrap">
         {title}
       </div>
       <div className='ballon'>
-          {text}
+        {text}
       </div>
       <div className="btn_wrap">
         {button}
