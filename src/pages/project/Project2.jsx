@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import AnotherHeader from "../../components/AnotherHeader";
-import { fadeAction, } from "../../style/global.style";
-import { Category, } from "../../style/basic.style";
+import AnotherHeader from "components/AnotherHeader";
+import { fadeAction, } from "style/global.style";
+import { Category, } from "style/basic.style";
 import Layout from "../Layout";
 import WhoIAM from "./WhoIAM";
 import { Media, Answering, Communication, History } from "./tab";
-import { project_menu } from "../../data/menu";
+import { project_menu } from "data/menu";
 import 'assets/base.css'
 
 export default function Project2() {
