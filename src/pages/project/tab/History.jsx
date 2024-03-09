@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Ballon } from 'components';
 import { ConfigProvider, Carousel, Modal } from 'antd';
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import 'assets/base.css';
 
 const items = [
@@ -102,7 +103,7 @@ export const History = () => {
           footer={[]}
         >
           <ConfigProvider>
-            <Carousel>
+            <Carousel arrows prevArrow={<LeftOutlined />} nextArrow={<RightOutlined />}>
               {selectedItem.details.map((detail, index) => (
                 <div key={index}>
                   <img src={detail} style={{ width: '100%', height: 'auto' }} alt={`Detail ${index + 1}`} />
