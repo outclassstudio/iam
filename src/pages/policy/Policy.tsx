@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import AnotherHeader from "../../components/AnotherHeader";
 import { mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Policy() {
   return (
     <Layout>
-      <AnotherHeader />
       <PolicyPageContainer>
         <PolicyContentWrapper>
         <Spacer/><Spacer/><Spacer/><Spacer/> 
