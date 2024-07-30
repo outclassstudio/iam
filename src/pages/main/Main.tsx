@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Header from "../../components/Header";
 import { fadeAction } from "../../style/global.style";
 import Layout from "../Layout";
 import FirstLayer from "./FirstLayer";
@@ -9,7 +8,6 @@ import ThirdLayer from "./ThirdLayer";
 export default function Main() {
   return (
     <Layout title="main">
-      <Header />
       <MainContainer>
         <FirstLayer />
         <SecondLayer />

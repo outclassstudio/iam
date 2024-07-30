@@ -7,6 +7,7 @@ import Teams from "./pages/teams/Teams";
 import Terms from "./pages/policy/Terms";
 import Policy from "./pages/policy/Policy";
 import { GlobalStyle } from "./style/global.style";
+import ProjectDetail from "pages/project/ProjectDetail";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/teams" element={<Teams />} />
-        <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/terms" element={<Terms/>} />
-        <Route path="/policy" element={<Policy/>} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/policy" element={<Policy />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import styled from "styled-components";
-import { LayerWrapper, Layer } from "./Project";
+import { LayerWrapper, Layer } from "style/basic.style";
 import { mediaQuery } from "../../style/global.style";
 
 const WhoIAM = () => {
@@ -30,7 +30,6 @@ const WhoIAM = () => {
       <Layer>
         <IntroTitle src="assets/WhoIAM-IntroductionTitle(PC).png" />
         <MobileIntroTitle src="assets/WhoIAM-IntroductionTitle(Mobile).png" />
-
         <IntroThumbnail
           src="assets/WhoIAM-IntroductionImg.png"
           showThumbnail={showThumbnail}

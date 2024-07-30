@@ -1,0 +1,7 @@
+:root {
+  --color-main01: #ebebeb;
+  --color-point01: #d51963;
+}
+
+@import 'assets/base.css';
+@import 'assets/antd-override.css';
