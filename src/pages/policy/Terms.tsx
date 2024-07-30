@@ -1,17 +1,15 @@
 import styled from "styled-components";
-import AnotherHeader from "../../components/AnotherHeader";
 import { mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Terms() {
   return (
     <Layout>
-      <AnotherHeader/>
       <TermsPageContainer>
         <TermsContentWrapper>
-        <TermsTitle>이메일 무단수집 거부</TermsTitle>
-        <Spacer/>
-        <EmailTerms/>
+          <TermsTitle>이메일 무단수집 거부</TermsTitle>
+          <Spacer />
+          <EmailTerms />
         </TermsContentWrapper>
       </TermsPageContainer>
     </Layout>
@@ -29,7 +27,7 @@ const TermsContentWrapper = styled.div`
   flex-direction: column;
 `;
 const Spacer = styled.div`
-  margin-top:25px;
+  margin-top: 25px;
 `;
 const TermsTitle = styled.div`
   text-align: center;

@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import AnotherHeader from "../../components/AnotherHeader";
 import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 
 export default function Contact() {
   return (
     <Layout>
-      <AnotherHeader />
       <ContactPageContainer>
         <ContactTitle></ContactTitle>
         <ContactWrapper>
