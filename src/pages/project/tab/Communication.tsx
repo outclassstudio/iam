@@ -3,21 +3,24 @@ import {
   Layer,
   LayerImage,
   LayerText,
-} from "../../../style/basic.style";
+} from "../../../style/project.style";
+import ProjectLayout from "../ProjectLayout";
 
 export default function Communication() {
   return (
-    <LayerWrapper>
-      <Layer>
-        <LayerImage src="assets/communication_image_1.png"></LayerImage>
-        <LayerText
-          className="a"
-          src="assets/communication_text_1.png"
-        ></LayerText>
-      </Layer>
-      <Layer>
-        <LayerImage src="assets/communication_image_2.png"></LayerImage>
-      </Layer>
-    </LayerWrapper>
+    <ProjectLayout>
+      <LayerWrapper>
+        <Layer>
+          <LayerImage src="assets/communication_image_1.png"></LayerImage>
+          <LayerText
+            className="a"
+            src="assets/communication_text_1.png"
+          ></LayerText>
+        </Layer>
+        <Layer>
+          <LayerImage src="assets/communication_image_2.png"></LayerImage>
+        </Layer>
+      </LayerWrapper>
+    </ProjectLayout>
   );
 }

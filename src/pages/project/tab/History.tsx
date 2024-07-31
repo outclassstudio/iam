@@ -1,19 +1,22 @@
-import { historyData } from "../../../data/history.data";
+import { historyData, SingleHistory } from "../../../data/history.data";
 import styled from "styled-components";
 import SingleProject from "components/SingleProject";
+import ProjectLayout from "../ProjectLayout";
 
 export default function History() {
   return (
-    <ProjectContainer>
-      {historyData.map((item: any, idx: number) => (
-        <SingleProject
-          key={idx}
-          id={item.id}
-          title={item.title}
-          img={item.thumbnail}
-        />
-      ))}
-    </ProjectContainer>
+    <ProjectLayout>
+      <ProjectContainer>
+        {historyData.map((item: SingleHistory, idx: number) => (
+          <SingleProject
+            key={idx}
+            id={item.id}
+            title={item.title}
+            img={item.thumbnail}
+          />
+        ))}
+      </ProjectContainer>
+    </ProjectLayout>
   );
 }
 

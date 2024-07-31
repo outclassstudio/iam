@@ -2,14 +2,14 @@ import { Carousel, ConfigProvider } from "antd";
 import Modal from "antd/es/modal/Modal";
 import Layout from "pages/Layout";
 import { useParams } from "react-router-dom";
-import { mediaQuery } from "style/global.style";
+import { fadeMoveAction, mediaQuery } from "style/global.style";
 import styled from "styled-components";
-import { historyData } from "../../data/history.data";
+import { historyData, SingleHistory } from "../../../data/history.data";
 import { useState } from "react";
 
 export default function ProjectDetail() {
   const params = useParams();
-  const data = historyData.find((e: any) => `${e.id}` === params.id);
+  const data = historyData.find((e: SingleHistory) => `${e.id}` === params.id);
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -17,22 +17,22 @@ export default function ProjectDetail() {
   };
 
   return (
-    <Layout title={"detail"}>
+    <Layout title={"project"}>
       <DetailContainer>
-        <Poster src={`../${data.thumbnail}`} alt={data.title} />
+        <Poster src={`../${data?.thumbnail}`} alt={data?.title} />
         <ContentsWrapper>
           <TextWrapper>
-            <Title>{data.title}</Title>
-            <Content>{data.text}</Content>
+            <Title>{data?.title}</Title>
+            <Content>{data?.text}</Content>
           </TextWrapper>
-          <Title>Overview</Title>
+          <Title>Photos</Title>
           <ImageWrapper>
-            {data.details?.map((e: string, idx: number) => (
+            {data?.details?.map((e: string, idx: number) => (
               <img onClick={openModal} key={idx} src={`../${e}`} alt="" />
             ))}
           </ImageWrapper>
         </ContentsWrapper>
-        {data.details && (
+        {data?.details && (
           <ConfigProvider
             theme={{
               components: {
@@ -44,7 +44,7 @@ export default function ProjectDetail() {
           >
             <Modal
               open={showModal}
-              title={data.title}
+              title={data?.title}
               onCancel={openModal}
               footer={[]}
               centered={true}
@@ -52,7 +52,7 @@ export default function ProjectDetail() {
               width={700}
             >
               <Carousel arrows>
-                {data.details.map((detail: any, index: any) => (
+                {data?.details.map((detail: string, index: number) => (
                   <div key={index}>
                     <img
                       src={`../${detail}`}
@@ -78,6 +78,7 @@ const DetailContainer = styled.div`
   gap: 30px;
   max-width: 1000px;
   padding: 20px;
+  animation: 0.6s ease-in-out ${fadeMoveAction};
 
   ${mediaQuery.mobile} {
     gap: 15px;
