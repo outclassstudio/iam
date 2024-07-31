@@ -1,9 +1,10 @@
 import { useState, useRef } from "react";
 import styled from "styled-components";
-import { LayerWrapper, Layer } from "style/basic.style";
-import { mediaQuery } from "../../style/global.style";
+import { LayerWrapper, Layer } from "style/project.style";
+import { mediaQuery } from "../../../style/global.style";
+import ProjectLayout from "../ProjectLayout";
 
-const WhoIAM = () => {
+export default function WhoIAM() {
   const [showThumbnail, setShowThumbnail] = useState(true);
   const introVideo = useRef<HTMLVideoElement | null>(null);
 
@@ -26,44 +27,44 @@ const WhoIAM = () => {
   };
 
   return (
-    <LayerWrapper>
-      <Layer>
-        <IntroTitle src="assets/WhoIAM-IntroductionTitle(PC).png" />
-        <MobileIntroTitle src="assets/WhoIAM-IntroductionTitle(Mobile).png" />
-        <IntroThumbnail
-          src="assets/WhoIAM-IntroductionImg.png"
-          showThumbnail={showThumbnail}
-          onClick={handleThumbnailClick}
-        />
-        <IntroVideo
-          ref={introVideo}
-          showThumbnail={showThumbnail}
-          onEnded={handleVideoEnded}
-          controls
-          controlsList="nodownload"
-          disablePictureInPicture
-        >
-          <source src="assets/WhoIAm_Video.mp4" type="video/mp4" />
-        </IntroVideo>
-        <IntroText src="assets/WhoIAM-IntroductionText(PC).png" />
-        <MobileIntroText src="assets/WhoIAM-IntroductionText(Mobile).png" />
-      </Layer>
-      <Layer>
-        <Composition src="assets/WhoIAM-Composition(PC).png" />
-        <MobileComposition src="assets/WhoIAM-Composition(Mobile).png" />
-      </Layer>
-      <Layer>
-        <Schedule src="assets/WhoIAM-Schedule(PC).png" />
-        <MobileSchedule src="assets/WhoIAM-Schedule(Mobile).png" />
-      </Layer>
-      <Layer>
-        <ApplyBtn onClick={handleLinkToApply}>Who I AM 신청하기</ApplyBtn>
-      </Layer>
-    </LayerWrapper>
+    <ProjectLayout>
+      <LayerWrapper>
+        <Layer>
+          <IntroTitle src="../assets/WhoIAM-IntroductionTitle(PC).png" />
+          <MobileIntroTitle src="../assets/WhoIAM-IntroductionTitle(Mobile).png" />
+          <IntroThumbnail
+            src="../assets/WhoIAM-IntroductionImg.png"
+            showThumbnail={showThumbnail}
+            onClick={handleThumbnailClick}
+          />
+          <IntroVideo
+            ref={introVideo}
+            showThumbnail={showThumbnail}
+            onEnded={handleVideoEnded}
+            controls
+            controlsList="nodownload"
+            disablePictureInPicture
+          >
+            <source src="../assets/WhoIAm_Video.mp4" type="video/mp4" />
+          </IntroVideo>
+          <IntroText src="../assets/WhoIAM-IntroductionText(PC).png" />
+          <MobileIntroText src="../assets/WhoIAM-IntroductionText(Mobile).png" />
+        </Layer>
+        <Layer>
+          <Composition src="../assets/WhoIAM-Composition(PC).png" />
+          <MobileComposition src="../assets/WhoIAM-Composition(Mobile).png" />
+        </Layer>
+        <Layer>
+          <Schedule src="../assets/WhoIAM-Schedule(PC).png" />
+          <MobileSchedule src="../assets/WhoIAM-Schedule(Mobile).png" />
+        </Layer>
+        <Layer>
+          <ApplyBtn onClick={handleLinkToApply}>Who I AM 신청하기</ApplyBtn>
+        </Layer>
+      </LayerWrapper>
+    </ProjectLayout>
   );
-};
-
-export default WhoIAM;
+}
 
 // Intro 비디오
 const IntroThumbnail = styled.img<{ showThumbnail: boolean }>`

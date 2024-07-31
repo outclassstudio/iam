@@ -1,4 +1,12 @@
-export const historyData: any = [
+export interface SingleHistory {
+  id: number;
+  title: string;
+  text: string;
+  thumbnail: string;
+  details?: string[];
+}
+
+export const historyData: SingleHistory[] = [
   {
     id: 1,
     title: "Who I am Preview",

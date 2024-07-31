@@ -59,7 +59,7 @@ export default function Header({ title }: Props) {
           className={
             window.location.pathname.indexOf("/project") !== -1 ? "active" : ""
           }
-          onClick={() => movePage("/project")}
+          onClick={() => movePage("/project/whoiam")}
         >
           Project
         </PathName>
@@ -79,7 +79,7 @@ export default function Header({ title }: Props) {
             src={
               title === "main"
                 ? "assets/title_logo.png"
-                : title === "detail"
+                : title === "project"
                 ? "../assets/title_logo_black.png"
                 : "assets/title_logo_black.png"
             }
