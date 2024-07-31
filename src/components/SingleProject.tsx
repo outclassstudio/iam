@@ -11,11 +11,16 @@ export default function SingleProject({ id, title, img }: IPrjProps) {
   const navigate = useNavigate();
   const onClick = () => {
     navigate(`/project/${id}`);
+
+    //*페이지 최상단으로 이동
+    window.scrollTo({
+      top: 0,
+    });
   };
 
   return (
     <ProjectContainer onClick={onClick}>
-      <ProjectThumbnail src={img} alt={title} />
+      <ProjectThumbnail src={`../${img}`} alt={title} />
       <TitleWrapper>{title}</TitleWrapper>
     </ProjectContainer>
   );
@@ -32,11 +37,12 @@ const ProjectThumbnail = styled.img`
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.103) 0px 4px 12px;
   border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   cursor: pointer;
+  opacity: 0.8;
 
   &:hover {
-    transform: scale(1.03) translateY(-5px);
+    opacity: 1;
   }
 `;
 
