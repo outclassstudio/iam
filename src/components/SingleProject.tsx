@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { mediaQuery } from "style/global.style";
 import styled from "styled-components";
 
 interface IPrjProps {
@@ -31,6 +32,7 @@ const ProjectContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0px 15px;
 `;
 
 const ProjectThumbnail = styled.img`
@@ -44,6 +46,10 @@ const ProjectThumbnail = styled.img`
   &:hover {
     opacity: 1;
   }
+
+  ${mediaQuery.mobile} {
+    opacity: 1;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -52,4 +58,8 @@ const TitleWrapper = styled.div`
   font-weight: 1000;
   color: #313131;
   cursor: pointer;
+
+  ${mediaQuery.mobile} {
+    font-size: 14px;
+  }
 `;
