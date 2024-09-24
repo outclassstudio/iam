@@ -96,12 +96,9 @@ interface ScrollPosition {
 }
 
 const Background = styled.div<ScrollPosition>`
-  /* width: 95%; */
   display: flex;
   align-items: center;
   margin-bottom: 60px;
-  /* justify-content: space-around;
-  flex-direction: column; */
   position: fixed;
   top: 0;
   left: 0;
@@ -109,16 +106,6 @@ const Background = styled.div<ScrollPosition>`
   z-index: 2;
   height: ${(props) => (props.scrollPosition > 100 ? "50px" : "114px")};
   padding: 10px;
-  /* padding: ${(props) => (props.scrollPosition > 100 ? "0px" : "15px")}; */
-  /* background-color: ${(props) =>
-    props.scrollPosition > 100 ? "rgba(255, 255, 255, 0.9)" : colorSet.base}; */
-  /* background-color: ${(props) =>
-    props.scrollPosition > 100 ? "rgba(255, 255, 255, 0.9)" : "white"}; */
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 0px; */
-  /* box-shadow: ${(props) =>
-    props.scrollPosition > 100
-      ? "rgba(0, 0, 0, 0.1) 0px 3px 2px 0px"
-      : "none"}; */
 `;
 
 const HeaderStyle = styled.div`

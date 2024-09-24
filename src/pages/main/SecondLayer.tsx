@@ -16,7 +16,6 @@ const SecondLayerContainer = styled.div`
   background-image: url("/assets/boy.png");
   background-position: center;
   background-size: cover;
-  width: 100vw;
   height: 792px;
   position: relative;
 

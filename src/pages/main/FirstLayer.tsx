@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../style/global.style";
+import { FlexDiv } from "style/utility.style";
 
 export default function FirstLayer() {
   return (
     <FirstLayerContainer>
       <BackgroundVideo autoPlay muted loop>
-        <VideoSource
-          src="assets/main.mp4"
-          type="video/mp4"
-        />
+        <VideoSource src="assets/main.mp4" type="video/mp4" />
       </BackgroundVideo>
       <ImageWrapper>
         <WhoAreYou src="assets/wau1.png" />
@@ -18,11 +16,7 @@ export default function FirstLayer() {
 }
 
 const FirstLayerContainer = styled.div`
-  /* background-image: url("/assets/main_resize.png");
-  background-position: center;
-  background-size: cover; */
   position: relative;
-  width: 100vw;
 `;
 const BackgroundVideo = styled.video`
   width: 100%;
@@ -33,13 +27,11 @@ const VideoSource = styled.source`
   height: 100%;
   object-fit: cover;
 `;
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(FlexDiv)`
   width: 100%;
-  display: flex;
   justify-content: center;
   position: absolute;
   bottom: 5px;
-  /* top: 920px; */
 `;
 const WhoAreYou = styled.img`
   width: 280px;

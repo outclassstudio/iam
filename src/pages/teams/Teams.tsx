@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
+import { FlexColumnDiv } from "style/utility.style";
 
 export default function Teams() {
   return (
@@ -14,9 +15,7 @@ export default function Teams() {
   );
 }
 
-const TeamsPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const TeamsPageContainer = styled(FlexColumnDiv)`
   margin-top: 170px;
   animation: 0.6s ease-in-out ${fadeAction};
 `;

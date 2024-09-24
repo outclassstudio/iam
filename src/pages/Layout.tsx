@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { FlexColumnDiv, FlexDiv } from "style/utility.style";
 
 interface ILayoutProps {
   children: JSX.Element;
@@ -17,13 +18,9 @@ export default function Layout({ children, title }: ILayoutProps) {
   );
 }
 
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+const MainContainer = styled(FlexColumnDiv)``;
 
-const ChildrenDiv = styled.div`
-  display: flex;
+const ChildrenDiv = styled(FlexDiv)`
   justify-content: center;
   background: none;
 `;
