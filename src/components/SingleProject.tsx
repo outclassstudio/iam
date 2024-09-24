@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { mediaQuery } from "style/global.style";
+import { FlexColumnDivCentered } from "style/utility.style";
 import styled from "styled-components";
 
 interface IPrjProps {
@@ -27,11 +28,7 @@ export default function SingleProject({ id, title, img }: IPrjProps) {
   );
 }
 
-const ProjectContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const ProjectContainer = styled(FlexColumnDivCentered)`
   margin: 0px 15px;
 `;
 

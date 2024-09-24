@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
+import { FlexColumnDiv } from "style/utility.style";
 
 export default function Terms() {
   return (
@@ -16,15 +17,11 @@ export default function Terms() {
   );
 }
 
-const TermsPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const TermsPageContainer = styled(FlexColumnDiv)`
   margin-top: 200px;
 `;
-const TermsContentWrapper = styled.div`
-  display: flex;
+const TermsContentWrapper = styled(FlexColumnDiv)`
   align-content: center;
-  flex-direction: column;
 `;
 const Spacer = styled.div`
   margin-top: 25px;

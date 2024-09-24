@@ -18,7 +18,7 @@ export default function About() {
 const AboutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
   align-items: center;
   margin-top: 170px;
   animation: 0.6s ease-in-out ${fadeAction};

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
+import { FlexColumnDiv, FlexDiv } from "style/utility.style";
 
 export default function Contact() {
   return (
@@ -23,9 +24,7 @@ export default function Contact() {
   );
 }
 
-const ContactPageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const ContactPageContainer = styled(FlexColumnDiv)`
   margin: 200px 0px 50px 0px;
   animation: 0.6s ease-in-out ${fadeAction};
 
@@ -33,8 +32,7 @@ const ContactPageContainer = styled.div`
     margin: 170px 0px 0px 0px;
   }
 `;
-const ContactWrapper = styled.div`
-  display: flex;
+const ContactWrapper = styled(FlexDiv)`
   margin-bottom: 50px;
 
   ${mediaQuery.mobile} {
@@ -61,9 +59,7 @@ const ContactImage = styled.img`
     margin-bottom: 20px;
   }
 `;
-const ContactContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const ContactContentWrapper = styled(FlexColumnDiv)`
   justify-content: center;
   margin-left: 25px;
   /* align-items: center; */

@@ -4,6 +4,7 @@ import { project_menu } from "data/menu";
 import { useNavigate } from "react-router-dom";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import { FlexColumnDiv, FlexDiv } from "style/utility.style";
 
 interface ILayoutProps {
   children: JSX.Element;
@@ -39,20 +40,15 @@ export default function ProjectLayout({ children }: ILayoutProps) {
   );
 }
 
-const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+const MainContainer = styled(FlexColumnDiv)``;
 
-const ChildrenDiv = styled.div`
-  display: flex;
+const ChildrenDiv = styled(FlexDiv)`
   justify-content: center;
   background: none;
   animation: 0.6s ease-in-out ${fadeAction};
 `;
 
-const ProjectHeader = styled.div`
-  display: flex;
+const ProjectHeader = styled(FlexDiv)`
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;

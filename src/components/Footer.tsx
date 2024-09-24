@@ -14,36 +14,33 @@ export default function Footer() {
 
   return (
     <FooterDiv>
-      <Left>
+      <InfoWrapper>
         <TextWrapper className="top">
-        <SmallTextWrapper>
-        <Link to="/terms">
-          <SubHyperLink onClick={handleTop}>이메일 무단수집 거부</SubHyperLink>
-        </Link>
-        <Link to="/policy">
-          <SubHyperLink onClick={handleTop}>개인정보 이용 약관</SubHyperLink>
-        </Link>
-        </SmallTextWrapper>
-          <MiddleText>사업자번호 : 102-80-03659</MiddleText>
-        </TextWrapper>
-        <TextWrapper>
           <SmallTextWrapper>
-            <SmallText>비영리단체 : 아이엠 </SmallText>
+            <Link to="/terms">
+              <SubHyperLink onClick={handleTop}>
+                이메일 무단수집 거부
+              </SubHyperLink>
+            </Link>
             <SmallText className="bar">|</SmallText>
-            <SmallText>대표 : 한승목, 이민형</SmallText>
+            <Link to="/policy">
+              <SubHyperLink onClick={handleTop}>
+                개인정보 이용 약관
+              </SubHyperLink>
+            </Link>
           </SmallTextWrapper>
+        </TextWrapper>
+        <MiddleText>사업자번호 : 102-80-03659</MiddleText>
+        <TextWrapper>
           <SmallTextWrapper>
             <SmallText>주소 : 노원구 동일로 1029 6F</SmallText>
             <SmallText className="bar">|</SmallText>
             <SmallText> 문의 : iamcreatorss@gmail.com</SmallText>
           </SmallTextWrapper>
-          <SmallTextWrapper>
-            <Copyright>© I AM All Rights Reserved.</Copyright>
-          </SmallTextWrapper>
         </TextWrapper>
-        
-      </Left>
-      <Right>
+        <Copyright>© I AM Creators' team All Rights Reserved.</Copyright>
+      </InfoWrapper>
+      <CategoryWrapper>
         <Link to="/about">
           <PathName onClick={handleTop}>About</PathName>
         </Link>
@@ -56,29 +53,31 @@ export default function Footer() {
         <Link to="/contact">
           <PathName onClick={handleTop}>Contact</PathName>
         </Link>
-      </Right>
+      </CategoryWrapper>
     </FooterDiv>
   );
 }
 
 const FooterDiv = styled(FlexDivCentered)`
   width: 100%;
-  height: 120px;
   margin: 0;
   border: none;
   color: white;
   font-family: "Pretendard-Regular";
+  padding: 15px 0px;
 
   ${mediaQuery.mobile} {
-    width: 360px;
-    height: 130px;
-    margin-bottom: 10px;
+    flex-direction: column-reverse;
   }
 `;
 
-const Left = styled.div`
+const InfoWrapper = styled.div`
   padding-left: 35px;
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 
   a {
     text-decoration: none;
@@ -90,14 +89,18 @@ const Left = styled.div`
   }
 
   ${mediaQuery.mobile} {
-    padding-left: 25px;
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
   }
 `;
 
-const Right = styled(FlexDiv)`
+const CategoryWrapper = styled(FlexDiv)`
   padding-right: 35px;
   gap: 10px;
   justify-content: right;
+  align-items: center;
   flex: 1 0 auto;
   font-size: 13px;
 
@@ -110,7 +113,12 @@ const Right = styled(FlexDiv)`
   }
 
   ${mediaQuery.mobile} {
+    width: 100%;
     padding-right: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
     a {
       font-size: 11px;
     }
@@ -123,22 +131,19 @@ const Copyright = styled.div`
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  margin-top: 5px;
 
   ${mediaQuery.mobile} {
-    /* display: none; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 const TextWrapper = styled.div`
   margin: 6px 0px 3px 0px;
-
-  ${mediaQuery.mobile} {
-    &.top {
-      /* display: flex;
-      flex-direction: column;
-      gap: 3px; */
-    }
-  }
 `;
 
 const MiddleText = styled.div`
@@ -154,9 +159,9 @@ const SmallTextWrapper = styled.div`
   gap: 5px;
 
   ${mediaQuery.mobile} {
-    flex-direction: column;
-    /* margin-bottom: 5px; */
-    gap: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -165,12 +170,6 @@ const SmallText = styled.div`
   font-size: 9px;
   line-height: 16px;
   color: #9a9a9a;
-
-  ${mediaQuery.mobile} {
-    &.bar {
-      display: none;
-    }
-  }
 `;
 const SubHyperLink = styled.div`
   font-weight: 500;

@@ -6,6 +6,7 @@ import { fadeMoveAction, mediaQuery } from "style/global.style";
 import styled from "styled-components";
 import { historyData, SingleHistory } from "../../../data/history.data";
 import { useState } from "react";
+import { FlexColumnDiv, FlexDivCentered } from "style/utility.style";
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -70,11 +71,8 @@ export default function ProjectDetail() {
   );
 }
 
-const DetailContainer = styled.div`
+const DetailContainer = styled(FlexDivCentered)`
   margin: 170px 20px 10px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 30px;
   max-width: 1000px;
   padding: 20px;
@@ -91,13 +89,13 @@ const Poster = styled.img`
   box-shadow: rgba(0, 0, 0, 0.103) 0px 4px 12px;
 `;
 
-const ContentsWrapper = styled.div`
+const ContentsWrapper = styled(FlexColumnDiv)`
   display: flex;
   flex-direction: column;
   gap: 10px;
 `;
 
-const TextWrapper = styled.div`
+const TextWrapper = styled(FlexColumnDiv)`
   display: flex;
   flex-direction: column;
   gap: 15px;

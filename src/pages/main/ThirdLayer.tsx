@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mediaQuery } from "../../style/global.style";
+import { FlexColumnDiv, FlexDiv, FlexDivCentered } from "style/utility.style";
 
 export default function ThirdLayer() {
   const images = [
@@ -24,29 +25,22 @@ interface Url {
   imageUrl: string;
 }
 
-const ThirdLayerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-`;
+const ThirdLayerContainer = styled(FlexColumnDiv)``;
 
-const ProfileText = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 70px;
-  align-items: center;
+const ProfileText = styled(FlexDivCentered)`
+  padding: 15px 0px;
   font-size: 32px;
   color: #7294ae;
-  text-decoration: underline;
+  font-style: italic;
+  font-weight: 900;
+  box-shadow: 10 10 10 rgba(0, 0, 0);
 
   ${mediaQuery.mobile} {
     font-size: 22px;
   }
 `;
 
-const ImageWrapper = styled.div`
-  display: flex;
-`;
+const ImageWrapper = styled(FlexDiv)``;
 
 const SingleImage = styled.div<Url>`
   background-image: url(${(props) => props.imageUrl});
