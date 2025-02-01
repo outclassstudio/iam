@@ -81,8 +81,9 @@ export const historyData: SingleHistory[] = [
     title: "'도파민 제로약방' 테마카페",
     text: "일상 속 폭발하는 도파민 대신 건강한 힐링이 필요한 여러분을 위한 도파민 디톡스 팝업전시 [ 제로약방 ]",
     thumbnail:
-      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/858135e0-4c5f-4fba-ee6d-b047fe2e8600/public",
+      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/f52755b5-9e02-48bb-7be0-ff63effbe500/public",
     details: [
+      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/858135e0-4c5f-4fba-ee6d-b047fe2e8600/public",
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/0c063680-762f-4ea6-fa1a-f3b2db2a8900/public",
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/a2f3f3bb-524f-4bdf-6074-bb09b33c1b00/public",
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/6d16be7e-ffae-46b6-8b37-262d45d0bc00/public",
@@ -112,11 +113,12 @@ export const historyData: SingleHistory[] = [
 올해를 새롭게 마음먹고 싶다면,
 나를 위한 강연, 취업도, 대인관계도 잘 풀어갈 수 있는 강연으로 준비했습니다. `,
     thumbnail:
-      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/7c006ca6-e988-48a4-ff30-34119ecec100/public",
+      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/c698bfc9-0d92-4dc1-132a-cdb515d0e700/public",
     details: [
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/11353f4c-40c8-4ffc-c5d9-ad0abb773200/public",
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/61a6386d-fb1b-4165-b26a-c77a9da09600/public",
       "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/28035868-9a6c-4e86-bfe9-f2ca71b86900/public",
+      "https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/7c006ca6-e988-48a4-ff30-34119ecec100/public",
     ],
   },
 ];
