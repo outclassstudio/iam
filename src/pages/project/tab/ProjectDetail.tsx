@@ -20,7 +20,7 @@ export default function ProjectDetail() {
   return (
     <Layout title={"project"}>
       <DetailContainer>
-        <Poster src={`../${data?.thumbnail}`} alt={data?.title} />
+        <Poster src={`${data?.thumbnail}`} alt={data?.title} />
         <ContentsWrapper>
           <TextWrapper>
             <Title>{data?.title}</Title>
@@ -29,7 +29,7 @@ export default function ProjectDetail() {
           <Title>Photos</Title>
           <ImageWrapper>
             {data?.details?.map((e: string, idx: number) => (
-              <img onClick={openModal} key={idx} src={`../${e}`} alt="" />
+              <img onClick={openModal} key={idx} src={`${e}`} alt="" />
             ))}
           </ImageWrapper>
         </ContentsWrapper>
@@ -56,7 +56,7 @@ export default function ProjectDetail() {
                 {data?.details.map((detail: string, index: number) => (
                   <div key={index}>
                     <img
-                      src={`../${detail}`}
+                      src={`${detail}`}
                       style={{ width: "100%", height: "auto" }}
                       alt={`Detail ${index + 1}`}
                     />
@@ -116,6 +116,7 @@ const Title = styled.div`
 const Content = styled.div`
   font-size: 18px;
   line-height: 1.5;
+  white-space: pre-wrap;
 
   ${mediaQuery.mobile} {
     font-size: 10px;
