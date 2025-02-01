@@ -22,7 +22,7 @@ export default function SingleProject({ id, title, img }: IPrjProps) {
 
   return (
     <ProjectContainer onClick={onClick}>
-      <ProjectThumbnail src={`../${img}`} alt={title} />
+      <ProjectThumbnail img={img} />
       <TitleWrapper>{title}</TitleWrapper>
     </ProjectContainer>
   );
@@ -32,13 +32,17 @@ const ProjectContainer = styled(FlexColumnDivCentered)`
   margin: 0px 15px;
 `;
 
-const ProjectThumbnail = styled.img`
+const ProjectThumbnail = styled.div<{ img: string }>`
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.103) 0px 4px 12px;
   border-radius: 10px;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
   opacity: 0.8;
+  aspect-ratio: 3/4;
+  background-image: url(${(props) => props.img});
+  background-position: center;
+  background-size: cover;
 
   &:hover {
     opacity: 1;
