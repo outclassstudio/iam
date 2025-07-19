@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { colorSet, mediaQuery } from "../style/global.style";
+import { mediaQuery } from "../style/global.style";
 
 interface Props {
   title?: string;
@@ -106,6 +106,7 @@ const Background = styled.div<ScrollPosition>`
   z-index: 2;
   height: ${(props) => (props.scrollPosition > 100 ? "50px" : "114px")};
   padding: 10px;
+  width: 100vw;
 `;
 
 const HeaderStyle = styled.div`
