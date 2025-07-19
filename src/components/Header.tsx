@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { colorSet, mediaQuery } from "../style/global.style";
+import { mediaQuery } from "../style/global.style";
 
 interface Props {
   title?: string;
