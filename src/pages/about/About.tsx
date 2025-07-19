@@ -112,7 +112,6 @@ const MainTitleWrapper = styled.div`
   width: 1000px;
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
   margin-top: 80px;
   margin-bottom: 120px;
 
@@ -171,11 +170,15 @@ const MotiveWrapper = styled.div`
   width: 100%;
   padding: 100px 0px;
   background: #f8f8f8;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
+  ${mediaQuery.mobile} {
+    margin-bottom: 120px;
+  }
 `;
 
 const MotiveHeader = styled.div`
@@ -246,7 +249,7 @@ const OurVisionWrapper = styled.div`
   width: 1000px;
   display: flex;
   gap: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 
   ${mediaQuery.pad} {
     width: 100%;
@@ -255,6 +258,7 @@ const OurVisionWrapper = styled.div`
   ${mediaQuery.mobile} {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 120px;
   }
 `;
 
@@ -298,23 +302,19 @@ const OurVisionList = styled.div`
 
   ${mediaQuery.mobile} {
     font-size: 17px;
+    margin-bottom: 20px;
   }
 `;
 
 const OurVisionImage = styled.img`
   width: 50%;
 
-  ${mediaQuery.pad} {
-    padding: 0px 20px;
-  }
-
   ${mediaQuery.mobile} {
-    width: 95%;
+    width: 100%;
   }
 `;
 
 const ProgramWrapper = styled.div`
-  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -416,6 +416,7 @@ const ProgramDescWrapper = styled.div`
 const ProgramMore = styled.div`
   display: flex;
   justify-content: center;
+  font-size: 20px;
   cursor: pointer;
 
   :hover {

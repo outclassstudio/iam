@@ -106,7 +106,6 @@ const Background = styled.div<ScrollPosition>`
   z-index: 2;
   height: ${(props) => (props.scrollPosition > 100 ? "50px" : "114px")};
   padding: 10px;
-  width: 100vw;
 `;
 
 const HeaderStyle = styled.div`
