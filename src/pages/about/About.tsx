@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 import { useNavigate } from "react-router-dom";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function About() {
   const navigate = useNavigate();
@@ -68,8 +69,11 @@ export default function About() {
           <ProgramHeader>우리가 하는 일</ProgramHeader>
           <ProgramTitle>'진짜 나’를 발견하는 여정을 함께 해요.</ProgramTitle>
           <ProgramBoxWrapper>
-            <ProgramBox>
-              <img src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/7f728d83-dd34-44a7-0453-ace758c1fd00/public" />
+            <ProgramBox onClick={() => movePage("/project/history")}>
+              <ProgramImgWrapper>
+                <img src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/7f728d83-dd34-44a7-0453-ace758c1fd00/public" />
+                <Overlay />
+              </ProgramImgWrapper>
               <ProgramDescWrapper>
                 <div>강연 및 각종 프로그램</div>
                 <div>
@@ -78,8 +82,11 @@ export default function About() {
                 </div>
               </ProgramDescWrapper>
             </ProgramBox>
-            <ProgramBox>
-              <img src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/77d82010-7c68-47eb-17d1-89d2ed9d8a00/public" />
+            <ProgramBox onClick={() => movePage("/project")}>
+              <ProgramImgWrapper>
+                <img src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/77d82010-7c68-47eb-17d1-89d2ed9d8a00/public" />
+                <Overlay />
+              </ProgramImgWrapper>
               <ProgramDescWrapper>
                 <div>Who I AM</div>
                 <div>
@@ -90,8 +97,9 @@ export default function About() {
               </ProgramDescWrapper>
             </ProgramBox>
           </ProgramBoxWrapper>
-          <ProgramMore onClick={() => movePage("/project")}>
+          <ProgramMore onClick={() => movePage("/project/history")}>
             더 많은 프로그램 보기
+            <ArrowRightIcon />
           </ProgramMore>
         </ProgramWrapper>
       </AboutPageContainer>
@@ -370,14 +378,39 @@ const ProgramBoxWrapper = styled.div`
   }
 `;
 
+const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: rgba(100, 100, 100, 0.3); // 회색, 투명도 0.4
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+`;
+
 const ProgramBox = styled.div`
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.103) 0px 4px 12px;
   overflow: auto;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  :hover {
+    background: #e7e7e7;
+  }
+  &:hover ${Overlay} {
+    opacity: 1;
+  }
+`;
+
+const ProgramImgWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
 
   img {
     width: 100%;
-    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 `;
 
@@ -415,11 +448,31 @@ const ProgramDescWrapper = styled.div`
 
 const ProgramMore = styled.div`
   display: flex;
+  gap: 10px;
   justify-content: center;
+  align-items: center;
   font-size: 20px;
   cursor: pointer;
 
+  svg {
+    width: 20px;
+    color: black;
+
+    ${mediaQuery.mobile} {
+      width: 15px;
+    }
+  }
+
   :hover {
     text-decoration: underline;
+  }
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+  }
+
+  ${mediaQuery.mobile} {
+    gap: 5px;
+    font-size: 15px;
   }
 `;
