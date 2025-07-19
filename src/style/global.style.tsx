@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 const LAYOUT_BREAK_POINT = {
-  MOBILE: 420,
+  MOBILE: 450,
   PAD: 1000,
   MAC: 1440,
 };

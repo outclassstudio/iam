@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fadeAction } from "../../style/global.style";
+import { fadeAction, mediaQuery } from "../../style/global.style";
 import Layout from "../Layout";
 import { useNavigate } from "react-router-dom";
 
@@ -20,19 +20,21 @@ export default function About() {
   return (
     <Layout title="about">
       <AboutPageContainer>
-        <MainTitle>
-          <div>진짜 내가 되고 싶은 우리가 모여</div>
-          <div>더 나은 세상을 향해</div>
-        </MainTitle>
-        <TitleImage src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/6e785781-848d-4051-c771-11e5c3536400/public" />
-        <MainDescription>
-          <div>
-            “I AM Creators’ Team”은 누구나 창조적 삶을 살 수 있다고 믿는,
-          </div>
-          <div>
-            ‘진짜 나’를 발견하고 실현하고자 하는 사람들이 모인 커뮤니티입니다.
-          </div>
-        </MainDescription>
+        <MainTitleWrapper>
+          <MainTitle>
+            <div>진짜 내가 되고 싶은 우리가 모여</div>
+            <div>더 나은 세상을 향해</div>
+          </MainTitle>
+          <TitleImage src="https://imagedelivery.net/BeIKmnUeqh2uGk7c6NSanA/6e785781-848d-4051-c771-11e5c3536400/public" />
+          <MainDescription>
+            <div>
+              “I AM Creators’ Team”은 누구나 창조적 삶을 살 수 있다고 믿는,
+            </div>
+            <div>
+              ‘진짜 나’를 발견하고 실현하고자 하는 사람들이 모인 커뮤니티입니다.
+            </div>
+          </MainDescription>
+        </MainTitleWrapper>
         <MotiveWrapper>
           <MotiveHeader>우리의 모티브</MotiveHeader>
           <MotiveMain>I AM WHO I AM</MotiveMain>
@@ -97,44 +99,79 @@ export default function About() {
   );
 }
 
-const MainTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 1000px;
-  font-size: 50px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  margin-top: 80px;
-`;
-
-const TitleImage = styled.img`
-  width: 1000px;
-  margin-top: 80px;
-  border-radius: 30px;
-  margin-bottom: 40px;
-`;
-
-const MainDescription = styled.div`
-  width: 1000px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.6;
-  margin-bottom: 50px;
-`;
-
 const AboutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* width: 100vw; */
   align-items: center;
   margin-top: 170px;
   animation: 0.6s ease-in-out ${fadeAction};
 `;
 
+const MainTitleWrapper = styled.div`
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  margin-top: 80px;
+  margin-bottom: 120px;
+
+  ${mediaQuery.pad} {
+    width: 100%;
+  }
+`;
+
+const MainTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  ${mediaQuery.pad} {
+    font-size: 35px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 25px;
+  }
+`;
+
+const TitleImage = styled.img`
+  margin-top: 80px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+
+  ${mediaQuery.pad} {
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    margin-top: 50px;
+  }
+`;
+
+const MainDescription = styled.div`
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 12px;
+  }
+`;
+
 const MotiveWrapper = styled.div`
-  margin-top: 70px;
-  margin-bottom: 50px;
+  width: 100%;
+  padding: 100px 0px;
+  background: #f8f8f8;
+  margin-bottom: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,12 +181,30 @@ const MotiveWrapper = styled.div`
 const MotiveHeader = styled.div`
   font-size: 20px;
   font-weight: 800;
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 15px;
+  }
 `;
 
 const MotiveMain = styled.div`
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 50px;
+
+  ${mediaQuery.pad} {
+    font-size: 35px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 25px;
+  }
 `;
 
 const MotivePhrase = styled.div`
@@ -158,6 +213,15 @@ const MotivePhrase = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  ${mediaQuery.pad} {
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 10px;
+  }
 `;
 
 const MotiveDescription = styled.div`
@@ -167,14 +231,31 @@ const MotiveDescription = styled.div`
   gap: 10px;
   font-size: 20px;
   font-weight: 800;
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 15px;
+  }
 `;
 
 const OurVisionWrapper = styled.div`
-  margin-top: 100px;
   width: 1000px;
   display: flex;
   gap: 20px;
   margin-bottom: 50px;
+
+  ${mediaQuery.pad} {
+    width: 100%;
+  }
+
+  ${mediaQuery.mobile} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const OurvisionTextWrapper = styled.div`
@@ -182,11 +263,25 @@ const OurvisionTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${mediaQuery.mobile} {
+    width: 100%;
+  }
 `;
+
 const OurVisionHeader = styled.div`
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 30px;
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 15px;
+  }
 `;
 
 const OurVisionList = styled.div`
@@ -195,10 +290,27 @@ const OurVisionList = styled.div`
   font-size: 25px;
   gap: 20px;
   font-weight: 900;
+
+  ${mediaQuery.pad} {
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 17px;
+  }
 `;
 
 const OurVisionImage = styled.img`
   width: 50%;
+
+  ${mediaQuery.pad} {
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    width: 95%;
+  }
 `;
 
 const ProgramWrapper = styled.div`
@@ -209,23 +321,53 @@ const ProgramWrapper = styled.div`
   align-items: center;
   gap: 20px;
   width: 1000px;
+
+  ${mediaQuery.pad} {
+    width: 100%;
+  }
 `;
 
 const ProgramHeader = styled.div`
   font-size: 20px;
   font-weight: 800;
+
+  ${mediaQuery.pad} {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 15px;
+  }
 `;
 
 const ProgramTitle = styled.div`
   font-size: 40px;
   font-weight: 900;
   margin-bottom: 50px;
+
+  ${mediaQuery.pad} {
+    font-size: 35px;
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    font-size: 20px;
+  }
 `;
 
 const ProgramBoxWrapper = styled.div`
   display: flex;
   gap: 40px;
   margin-bottom: 20px;
+
+  ${mediaQuery.pad} {
+    padding: 0px 20px;
+  }
+
+  ${mediaQuery.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const ProgramBox = styled.div`
@@ -247,11 +389,27 @@ const ProgramDescWrapper = styled.div`
     font-size: 25px;
     font-weight: 900;
     margin-bottom: 10px;
+
+    ${mediaQuery.pad} {
+      font-size: 22px;
+    }
+
+    ${mediaQuery.mobile} {
+      font-size: 20px;
+    }
   }
 
   div:nth-child(2) {
     color: #636363;
     font-weight: 100;
+
+    ${mediaQuery.pad} {
+      font-size: 13px;
+    }
+
+    ${mediaQuery.mobile} {
+      font-size: 11px;
+    }
   }
 `;
 
